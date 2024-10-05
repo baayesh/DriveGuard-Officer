@@ -3,7 +3,7 @@
     min-height: 950px;
     max-height: 1000px;
     overflow: auto;
-    background: linear-gradient(to bottom, rgb(81, 18, 255), transparent);
+    background: linear-gradient(to bottom, rgb(47, 135, 218), transparent);
 }
 
 .login-title{
@@ -23,36 +23,16 @@
     margin-top: 25%;
 }
 
-.tab-container{
+.title-box{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
     margin: auto;
     width: 90%;
     height: 50px;
     margin-top: 15%;
-    border-radius: 5px;
-}
-
-.tab{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 45px;
-    color: rgb(255, 255, 255);
-    background: rgb(5, 16, 179);
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.gray{
-    background: rgb(81, 18, 255);
-    color: rgb(170, 165, 165);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .inputs{
