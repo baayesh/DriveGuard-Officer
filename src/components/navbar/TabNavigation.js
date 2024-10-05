@@ -13,7 +13,7 @@ const TabNavigation = ({bgsearch, bgalert, bgfine, bgsettings}) => {
                 </div>
 
                 <div className="nav-links" style={{background: bgfine}}>
-                    <Link to="/fine"><img src={navTabFine} alt="Fine tab button" />Fine</Link>
+                    <Link to="/fine"><img src={navTabFine} alt="Fine tab button" />Fining</Link>
                 </div>
 
                 <div className="nav-links" style={{background: bgalert}}>

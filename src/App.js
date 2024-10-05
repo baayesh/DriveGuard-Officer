@@ -1,9 +1,9 @@
 import LoginSignup from './components/auth/LoginSignup';
 import './App.css';
-//import Home from './views/search/Search';
-//import New from './views/alert/Alert';
-//import History from './views/fine/Fine';
-//import Settings from './views/settings/Settings';
+import Search from './views/search/Search';
+import Alert from './views/alert/Alert';
+import Fine from './views/fine/Fine';
+import Settings from './views/settings/Settings';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -13,10 +13,10 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<LoginSignup/>} />
-          {/* <Route path="/search" element={<Home/>} />
-          <Route path="/fine" element={<History/>} />
-          <Route path="/alert" element={<New/>} />
-          <Route path="/settings" element={<Settings/>} /> */}
+          <Route path="/search" element={<Search/>} />
+          <Route path="/fine" element={<Fine/>} />
+          <Route path="/alert" element={<Alert/>} />
+          <Route path="/settings" element={<Settings/>} />
         </Routes>
       </div>
       <tabNavigation />
