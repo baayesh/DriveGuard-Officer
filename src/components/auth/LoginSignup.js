@@ -18,7 +18,7 @@ const LoginSignup = () => {
     // Handle Login Button Action
     const handleLogin = () => {
         console.log("Login:", { username, password });
-        navigate('/Home');
+        //navigate('/Home');
     };
 
     // Handle Sign Up Button Action
