@@ -1,0 +1,11 @@
+.displaybox-content{
+    min-height: 200px;
+    max-height: 500px;
+    overflow: auto;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}

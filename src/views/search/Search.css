@@ -6,3 +6,37 @@
     /* background: rgb(61, 61, 61); */
     background: linear-gradient(to bottom, rgb(98, 28, 230), transparent);
 }
+
+.search-box-content{
+    margin-top: 10%;
+    height: auto;
+}
+
+.search-box-content h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 10%;
+}
+
+.search-input{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    gap: 5%;
+    margin-bottom: 10%;
+}
+
+.search-input input{
+    width: 70%;
+    border-radius: 5%;
+}
+
+.search-input button{
+    width: 30%;
+    /* color: white;
+    background: rgb(75, 3, 75); */
+    border-radius: 5%;
+}
