@@ -21,9 +21,9 @@ const Search = () => {
             <HeaderBox headertext={"Search"}/>
             <div className='page-content-search'>
                 <div className='search-box-content'>
-                    <h2>Search Offender</h2>
+                    <h2>Find Offender</h2>
                     <div className='search-input'>
-                        <input type="text" value={inputOffenderDLN} />
+                        <input type="text" value={inputOffenderDLN} placeholder="Driving License Number"/>
                         <button onClick={handleSearchDLNClick}>Search</button>
                     </div>
                     <DisplayBox displayBoxContent={OffenderDetails}/>
