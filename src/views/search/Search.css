@@ -36,17 +36,26 @@
 
 .search-input button{
     width: 30%;
-    /* color: white;
-    background: rgb(75, 3, 75); */
     border-radius: 5%;
+    background: rgb(90, 2, 178);
+    color: white;
 }
 
 .fine-on-the-offender{
     display: flex;
     justify-content: center;
     width: 80%;
-    height: 35px;
+    height: auto;
     margin: auto;
     border-radius: 5%;
     padding: 5%;
+}
+
+.fine-on-the-offender button{
+    width: 100%;
+    height: 35px;
+    border-radius: 5%;
+    background: rgb(90, 2, 178);
+    color: white;
+    margin-top: 5%;
 }

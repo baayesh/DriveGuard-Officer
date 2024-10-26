@@ -21,7 +21,7 @@ const Search = () => {
     const navigate = useNavigate();
 
     //Handle: Fine on Offernder Click
-    const landleFineOnOffender = () => {
+    const handleFineOnOffender = () => {
         navigate('/Fine');
     };
 
@@ -37,7 +37,7 @@ const Search = () => {
                     </div>
                     <DisplayBox displayBoxContent={OffenderDetails}/>
                     <div className='fine-on-the-offender'>
-                        <button onClick={landleFineOnOffender}>Fine on Offender</button>
+                        <button onClick={handleFineOnOffender}>Fine on Offender</button>
                     </div>
                 </div>
             </div>

@@ -6,3 +6,38 @@
     /* background: rgb(61, 61, 61); */
     background: linear-gradient(to bottom, rgb(98, 28, 230), transparent);
 }
+
+.fine-box-content{
+    margin-top: 10%;
+    height: auto;
+    /* background: red; */
+}
+
+.fine-box-content-inputs{
+    width: 80%;
+    margin: auto;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.fine-box-content-inputs h3{
+    color: white;
+}
+
+.fine-box-content-inputs input{
+    height: 25px;
+}
+
+.fine-box-content-inputs select{
+    height: 25px;
+}
+
+.fine-box-content-inputs button{
+    height: 40px;
+    background: rgb(131, 20, 242);
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+}
