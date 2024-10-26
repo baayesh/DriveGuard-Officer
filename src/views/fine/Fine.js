@@ -1,6 +1,7 @@
 import './Fine.css';
 import HeaderBox from '../../components/objects/HeaderBox/HeaderBox';
 import TabNavigation from '../../components/navbar/TabNavigation';
+import ProceedPopUp from '../../components/objects/ProceedPopUp/ProceedPopUp';
 import React, { useState } from 'react';
 
 // Offense List
@@ -22,11 +23,24 @@ const Fine = () => {
     //Value of Fine
     let fineValue="";
 
-    //Handle: Proceed Click
-    const handleProceed = () => {
-        
+    
+    // Proceed Popup
+    const [showModal, setShowModal] = useState(false);
+
+    const handleOpenModal = () => {
+        setShowModal(true);
     };
 
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleProceed = () => {
+        alert("Proceeded!");
+        setShowModal(false);
+    };
+    
+    
     return ( 
         <div className="container">
             <HeaderBox headertext={"Fine"}/>
@@ -45,7 +59,8 @@ const Fine = () => {
                         </select>
                         <h3>Amount of Fine</h3>
                         <input type="text" value={fineValue} placeholder="Value of the Fine"/>
-                        <button onClick={handleProceed}>Proceed</button>
+                        <button onClick={handleOpenModal}>Proceed</button>
+                        <ProceedPopUp show={showModal} onClose={handleCloseModal} onProceed={handleProceed} />
                     </div>
                 </div>
             </div>
