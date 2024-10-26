@@ -40,3 +40,13 @@
     background: rgb(75, 3, 75); */
     border-radius: 5%;
 }
+
+.fine-on-the-offender{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    border-radius: 5%;
+    padding: 5%;
+}

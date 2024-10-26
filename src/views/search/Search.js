@@ -2,6 +2,7 @@ import './Search.css';
 import HeaderBox from '../../components/objects/HeaderBox/HeaderBox';
 import TabNavigation from '../../components/navbar/TabNavigation';
 import DisplayBox from '../../components/objects/DisplayBox/DisplayBox';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
 
@@ -16,6 +17,14 @@ const Search = () => {
         // Click event
     };
 
+    // Navigate to fining page
+    const navigate = useNavigate();
+
+    //Handle: Fine on Offernder Click
+    const landleFineOnOffender = () => {
+        navigate('/Fine');
+    };
+
     return ( 
         <div className="container">
             <HeaderBox headertext={"Search"}/>
@@ -27,6 +36,9 @@ const Search = () => {
                         <button onClick={handleSearchDLNClick}>Search</button>
                     </div>
                     <DisplayBox displayBoxContent={OffenderDetails}/>
+                    <div className='fine-on-the-offender'>
+                        <button onClick={landleFineOnOffender}>Fine on Offender</button>
+                    </div>
                 </div>
             </div>
             <TabNavigation bgsearch={"rgb(10, 55, 202)"}/>
