@@ -23,6 +23,9 @@ const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
     //set value of fine
     const [fineValue, setfineValue] = useState("");
 
+    //Set Witness Officer's ID
+    const [witnessOfficerID, setWitnessOfficerID] = useState("");
+
     // Handle Proceed Popup
     const [showModal, setShowModal] = useState(false);
 
@@ -35,7 +38,7 @@ const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
     };
 
     const handleProceedButton = () => {
-        alert("Proceeded!");
+        alert("Proceeded!");// Action with Proceed on Popup Window
         setShowModal(false);
         handleClearContentButton();
     };
@@ -44,7 +47,9 @@ const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
     const handleClearContentButton = () => {
         setOffenderID(""); // Clear Offender ID/ DLN
         setSelectedOffence(options[0].value); // Reset to default option
+        setWitnessOfficerID(""); // Clear Witness Officer's ID
         setfineValue(""); // Clear Fine Value
+
         onClearOffenderDLN(); // Call the function to clear the offender DLN in App.js
     };
     
@@ -66,6 +71,8 @@ const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
                         </select>
                         <h3>Value of Fine</h3>
                         <input type="text" value={fineValue} onChange={(e) => setfineValue(e.target.value)} placeholder="Value of the Fine"/>
+                        <h3>Witness Officer's ID</h3>
+                        <input type="text" value={witnessOfficerID} onChange={(e) => setWitnessOfficerID(e.target.value)} placeholder="Witness Officer's ID"/>
                         <button className='proceed-button-make-fine' onClick={handleOpenModal}>Proceed</button>
                         <button className='clear-button-make-fine' onClick={handleClearContentButton}>Clear All</button>
                         <ProceedPopUp show={showModal} title={"Fine on Offender"} onClose={handleCloseModal} onProceed={handleProceedButton} />
