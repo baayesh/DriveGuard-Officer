@@ -17,7 +17,17 @@
     text-align: center;
   }
   
-  .modal-content button {
+  .on-click-proceed{
     margin: 10px;
+    height: 35px;
+    background: rgb(131, 20, 242);
+    color: white;
+    border-radius: 5px;
+  }
+
+  .on-click-cancel{
+    margin: 10px;
+    height: 35px;
+    border-radius: 5px;
   }
   

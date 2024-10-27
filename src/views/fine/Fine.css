@@ -34,10 +34,19 @@
     height: 25px;
 }
 
-.fine-box-content-inputs button{
+.proceed-button-make-fine{
     height: 40px;
     background: rgb(131, 20, 242);
     color: white;
     border-radius: 5px;
     margin-top: 30px;
 }
+
+.clear-button-make-fine{
+    height: 40px;
+    background: rgb(164, 122, 240);
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
