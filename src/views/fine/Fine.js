@@ -14,11 +14,14 @@ const options = [
 
 const Fine = ({ inputOffenderID }) => {
 
-    // Select Offenses
-    const [selecteOffense, setSelecteOffense] = useState(options[0].value);
+    //Offender ID/ DLN
+    const [offenderID, setOffenderID] = useState(inputOffenderID);
 
-    //Value of Fine
-    let fineValue="";
+    // Select Offenses
+    const [selectedOffence, setSelectedOffence] = useState(options[0].value);
+
+    //set value of fine
+    const [fineValue, setfineValue] = useState("");
 
     // Handle Proceed Popup
     const [showModal, setShowModal] = useState(false);
@@ -31,9 +34,19 @@ const Fine = ({ inputOffenderID }) => {
         setShowModal(false);
     };
 
-    const handleProceed = () => {
+    const handleProceedButton = () => {
         alert("Proceeded!");
         setShowModal(false);
+        setOffenderID(""); // Clear Offender ID/ DLN
+        setSelectedOffence(options[0].value); // Reset to default option
+        setfineValue(""); // Clear Fine Value
+    };
+
+    // Handle Clear Content Button
+    const handleClearContentButton = () => {
+        setOffenderID(""); // Clear Offender ID/ DLN
+        setSelectedOffence(options[0].value); // Reset to default option
+        setfineValue(""); // Clear Fine Value
     };
     
     return ( 
@@ -43,9 +56,9 @@ const Fine = ({ inputOffenderID }) => {
                 <div className='fine-box-content'>
                     <div className='fine-box-content-inputs'>
                         <h3>Offender ID</h3>
-                        <input type="text" value={inputOffenderID} placeholder="Driving License Number"/>
+                        <input type="text" value={offenderID} onChange={(e) => setOffenderID(e.target.value)} placeholder="Driving License Number"/>
                         <h3>Type of offence</h3>
-                        <select value={selecteOffense} onChange={(e) => setSelecteOffense(e.target.value)}>
+                        <select value={selectedOffence} onChange={(e) => setSelectedOffence(e.target.value)}>
                         {options.map((option) => (
                             <option key={option.value} value={option.value}>
                             {option.label}
@@ -53,9 +66,10 @@ const Fine = ({ inputOffenderID }) => {
                         ))}
                         </select>
                         <h3>Value of Fine</h3>
-                        <input type="text" value={fineValue} placeholder="Value of the Fine"/>
-                        <button onClick={handleOpenModal}>Proceed</button>
-                        <ProceedPopUp show={showModal} onClose={handleCloseModal} onProceed={handleProceed} />
+                        <input type="text" value={fineValue} onChange={(e) => setfineValue(e.target.value)} placeholder="Value of the Fine"/>
+                        <button className='proceed-button-make-fine' onClick={handleOpenModal}>Proceed</button>
+                        <button className='clear-button-make-fine' onClick={handleClearContentButton}>Clear All</button>
+                        <ProceedPopUp show={showModal} title={"Fine on Offender"} onClose={handleCloseModal} onProceed={handleProceedButton} />
                     </div>
                 </div>
             </div>

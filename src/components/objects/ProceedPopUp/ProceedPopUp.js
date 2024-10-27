@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProceedPopUp.css';
 
-function ProceedPopUp({ show, onClose, onProceed }) {
+function ProceedPopUp({ show, title, onClose, onProceed }) {
   if (!show) {
     return null;
   }
@@ -9,10 +9,10 @@ function ProceedPopUp({ show, onClose, onProceed }) {
   return (
     <div className="modal">
       <div className="modal-content">
-        <h2>Fine on Offender</h2>
+        <h2>{title}</h2>
         <p>Do you want to proceed?</p>
-        <button onClick={onProceed}>Proceed</button>
-        <button onClick={onClose}>Cancel</button>
+        <button className='on-click-proceed' onClick={onProceed}>Proceed</button>
+        <button className='on-click-cancel' onClick={onClose}>Cancel</button>
       </div>
     </div>
   );
