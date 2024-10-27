@@ -12,10 +12,7 @@ const options = [
     { value: 'Offenses 3', label: 'Offenses 3' },
 ];
 
-const Fine = () => {
-
-    //Offender ID
-    let inputOffenderID ="";
+const Fine = ({ inputOffenderID }) => {
 
     // Select Offenses
     const [selecteOffense, setSelecteOffense] = useState(options[0].value);
@@ -23,8 +20,7 @@ const Fine = () => {
     //Value of Fine
     let fineValue="";
 
-    
-    // Proceed Popup
+    // Handle Proceed Popup
     const [showModal, setShowModal] = useState(false);
 
     const handleOpenModal = () => {
@@ -39,7 +35,6 @@ const Fine = () => {
         alert("Proceeded!");
         setShowModal(false);
     };
-    
     
     return ( 
         <div className="container">
@@ -57,7 +52,7 @@ const Fine = () => {
                             </option>
                         ))}
                         </select>
-                        <h3>Amount of Fine</h3>
+                        <h3>Value of Fine</h3>
                         <input type="text" value={fineValue} placeholder="Value of the Fine"/>
                         <button onClick={handleOpenModal}>Proceed</button>
                         <ProceedPopUp show={showModal} onClose={handleCloseModal} onProceed={handleProceed} />
