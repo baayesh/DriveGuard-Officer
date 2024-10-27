@@ -10,16 +10,13 @@
 .fine-box-content{
     margin-top: 10%;
     height: auto;
-    /* background: red; */
 }
 
 .fine-box-content-inputs{
     width: 80%;
     margin: auto;
-    /* background: green; */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 .fine-box-content-inputs h3{
@@ -27,11 +24,17 @@
 }
 
 .fine-box-content-inputs input{
-    height: 25px;
+    height: 30px;
+    border-radius: 5px;
 }
 
 .fine-box-content-inputs select{
-    height: 25px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.fine-box-content-inputs select option{
+    width: 75px;
 }
 
 .proceed-button-make-fine{
