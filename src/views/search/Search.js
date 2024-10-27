@@ -3,11 +3,13 @@ import HeaderBox from '../../components/objects/HeaderBox/HeaderBox';
 import TabNavigation from '../../components/navbar/TabNavigation';
 import DisplayBox from '../../components/objects/DisplayBox/DisplayBox';
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const Search = () => {
+const Search = ({ onHandleFine }) => {
 
     //DLN: Dirving License Number
-    let inputOffenderDLN ="";
+    // Pass DLN from this to Fine
+    const [inputOffenderDLN, setInputOffenderDLN] = useState("");
 
     //Offender details
     let OffenderDetails ="";
@@ -22,6 +24,7 @@ const Search = () => {
 
     //Handle: Fine on Offernder Click
     const handleFineOnOffender = () => {
+        onHandleFine(inputOffenderDLN);
         navigate('/Fine');
     };
 
@@ -32,7 +35,7 @@ const Search = () => {
                 <div className='search-box-content'>
                     <h2>Find Offender</h2>
                     <div className='search-input'>
-                        <input type="text" value={inputOffenderDLN} placeholder="Driving License Number"/>
+                        <input type="text" value={inputOffenderDLN} onChange={(e) => setInputOffenderDLN(e.target.value)} placeholder="Driving License Number"/>
                         <button onClick={handleSearchDLNClick}>Search</button>
                     </div>
                     <DisplayBox displayBoxContent={OffenderDetails}/>
