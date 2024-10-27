@@ -12,7 +12,7 @@ const options = [
     { value: 'Offenses 3', label: 'Offenses 3' },
 ];
 
-const Fine = ({ inputOffenderID }) => {
+const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
 
     //Offender ID/ DLN
     const [offenderID, setOffenderID] = useState(inputOffenderID);
@@ -37,9 +37,7 @@ const Fine = ({ inputOffenderID }) => {
     const handleProceedButton = () => {
         alert("Proceeded!");
         setShowModal(false);
-        setOffenderID(""); // Clear Offender ID/ DLN
-        setSelectedOffence(options[0].value); // Reset to default option
-        setfineValue(""); // Clear Fine Value
+        handleClearContentButton();
     };
 
     // Handle Clear Content Button
@@ -47,6 +45,7 @@ const Fine = ({ inputOffenderID }) => {
         setOffenderID(""); // Clear Offender ID/ DLN
         setSelectedOffence(options[0].value); // Reset to default option
         setfineValue(""); // Clear Fine Value
+        onClearOffenderDLN(); // Call the function to clear the offender DLN in App.js
     };
     
     return ( 
