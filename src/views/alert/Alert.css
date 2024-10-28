@@ -6,3 +6,10 @@
     /* background: rgb(61, 61, 61); */
     background: linear-gradient(to bottom, rgb(98, 28, 230), transparent);
 }
+
+.display-alert-wrapper{
+    margin-top: 10%;
+    height: auto;
+    display: flex;
+    align-content: center;
+}
