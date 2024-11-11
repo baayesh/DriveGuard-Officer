@@ -8,8 +8,8 @@ const login = async (policeIdNumber, password) => {
     const response = await axios.post(
       `${backendUrl}/trafficOfficer/login`,
       {
-        policeIdNumber: 34443,
-        password: "password123",
+        policeIdNumber: policeIdNumber,
+        password: password,
       },
       {
         headers: {
