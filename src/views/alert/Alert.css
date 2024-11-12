@@ -11,5 +11,15 @@
     margin-top: 10%;
     height: auto;
     display: flex;
+    flex-direction: column;
     align-content: center;
+ 
+
+}
+
+.fine-list{
+    display: flex;
+    flex-direction: column;
+    background-color: lightseagreen;
+   margin: 0.7em 0.5em;
 }

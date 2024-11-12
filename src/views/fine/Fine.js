@@ -53,7 +53,7 @@ const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
         const response = await createFine (officerId, offenderID, selectedOffence, witnessOfficerID );
         if(response.status === 201){
           toast.update(loading, {
-            render: "Offence Created Successfuly",
+            render: "Offence Created Successfully",
             type: "success",
             isLoading: false,
             position: "top-right",

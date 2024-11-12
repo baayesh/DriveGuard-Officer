@@ -49,13 +49,13 @@ const createFine = async (officerId, licenceNumber, fineListId, witnessOfficerId
 };
 
 //get fine list by witnessed officer id
-const getFineList = async (witnessOfficerId) => {
+const getFineList = async (witnessedOfficerId) => {
     try {
       const response = await axios.get(
         `${backendUrl}/trafficOfficer/get/witnessingOffencesList`,
         {
             params:{
-                witnessOfficerId
+              witnessedOfficerId
             }
         },
         {
@@ -66,7 +66,7 @@ const getFineList = async (witnessOfficerId) => {
       );
       return response;
     } catch (err) {
-      console.error("get driver api error ", err);
+      console.error("get fine list api error: ", err);
     }
 };
 
