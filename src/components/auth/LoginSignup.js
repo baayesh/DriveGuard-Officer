@@ -67,7 +67,7 @@ const LoginSignup = () => {
 
       <div className="page-content-login">
         <div className="login-title">
-          <h1>DriveGuard</h1>
+          <h1>Drive Guard</h1>
           <p>Your drive guide companion</p>
         </div>
 

@@ -12,3 +12,7 @@
     position: fixed; 
     top: 0; 
 }
+
+.headerbox h3{
+    font-family: "Montserrat", serif;
+}
