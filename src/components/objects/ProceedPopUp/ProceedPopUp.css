@@ -11,23 +11,35 @@
   }
   
   .modal-content {
+    font-family: "Montserrat", serif;
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius:1.5em;
     text-align: center;
   }
+
+  .modal-content h2{
+    margin-bottom: 0.25em;
+  }
   
+
   .on-click-proceed{
+    font-family: "Montserrat", serif;
     margin: 10px;
-    height: 35px;
     background: rgb(131, 20, 242);
     color: white;
-    border-radius: 5px;
+    border-radius: 1em;
+    border: none;
+    padding: 0.65em 1em;
   }
 
   .on-click-cancel{
+    font-family: "Montserrat", serif;
     margin: 10px;
     height: 35px;
     border-radius: 5px;
+    border: none;
+    padding: 0.65em 1em;
+    border-radius: 1em;
   }
   
