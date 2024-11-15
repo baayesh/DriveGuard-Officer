@@ -5,4 +5,24 @@
     overflow: auto;
     background: rgb(61, 61, 61);
     /* background: linear-gradient(to bottom, rgb(240, 240, 240), transparent); */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.page-content-settings button{
+    height: fit-content;
+    width: fit-content;
+    padding: 1em 2em;
+    border-radius: 2em;
+    font-family: "Montserrat", serif;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-weight: 700;
+}
+
+.page-content-settings button:hover{
+    background-color: white;
+    color: crimson;
 }
