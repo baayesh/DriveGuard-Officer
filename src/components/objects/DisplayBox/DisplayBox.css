@@ -1,11 +1,21 @@
 .displaybox-content{
-    min-height: 200px;
-    max-height: 500px;
+    font-family: "Montserrat", serif;
+    height: fit-content;
     overflow: auto;
     width: 90%;
     text-align: center;
     margin: auto;
-    border-radius: 7px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background: rgb(255, 255, 255);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 1em 1em;
 }
+
+.displaybox-content h3,h4,p{
+    margin:0;
+}
+
+
