@@ -131,18 +131,20 @@ const Fine = ({ inputOffenderID, onClearOffenderDLN }) => {
               onChange={(e) => setWitnessOfficerID(e.target.value)}
               placeholder="Witness Officer's ID"
             />
-            <button
-              className="proceed-button-make-fine"
-              onClick={handleOpenModal}
-            >
-              Proceed
-            </button>
-            <button
-              className="clear-button-make-fine"
-              onClick={handleClearContentButton}
-            >
-              Clear All
-            </button>
+            <div className="btn-row">
+              <button
+                className="proceed-button-make-fine"
+                onClick={handleOpenModal}
+              >
+                Proceed
+              </button>
+              <button
+                className="clear-button-make-fine"
+                onClick={handleClearContentButton}
+              >
+                Clear All
+              </button>
+            </div>
             <ProceedPopUp
               show={showModal}
               title={"Fine on Offender"}

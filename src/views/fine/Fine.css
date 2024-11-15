@@ -1,3 +1,7 @@
+.no-scroll{
+   overflow-y: hidden;
+}
+
 .page-content-fine{
     margin-top: 50px;
     min-height: 1200px;
@@ -21,16 +25,39 @@
 
 .fine-box-content-inputs h3{
     color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
 }
 
 .fine-box-content-inputs input{
+    font-family: "Montserrat", serif;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 2em;
+    border: none;
+    padding-left: 1em;
+}
+
+.fine-box-content-inputs input:focus{
+    outline: none;
+}
+
+.fine-box-content-inputs input::placeholder{
+    font-family: "Montserrat", serif;
 }
 
 .fine-box-content-inputs select{
     height: 35px;
     border-radius: 5px;
+    font-family: "Montserrat", serif;
+    border-radius: 2em;
+    border: none;
+    padding-left: 1em;
+}
+
+.fine-box-content-inputs select:focus{
+    outline: none;
 }
 
 .fine-box-content-inputs select option{
@@ -38,18 +65,49 @@
 }
 
 .proceed-button-make-fine{
-    height: 40px;
+    font-family: "Montserrat", serif;
+    width: fit-content;
+    align-self: center;
     background: rgb(131, 20, 242);
     color: white;
-    border-radius: 5px;
+    border-radius: 2rem;
+    border: none;
     margin-top: 30px;
+    padding: 1em 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(0.3s ease-in);
+}
+
+.proceed-button-make-fine:hover{
+    background-color: white;
+    color: rgb(131, 20, 242);
+    scale: 0.9;
+}
+.btn-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   gap: 1em;
 }
 
 .clear-button-make-fine{
-    height: 40px;
+
     background: rgb(164, 122, 240);
+    font-family: "Montserrat", serif;
+    width: fit-content;
+    align-self: center;
     color: white;
-    border-radius: 5px;
+    border-radius: 2rem;
+    border: none;
     margin-top: 30px;
+    padding: 1em 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(0.3s ease-in);
+}
+
+.clear-button-make-fine:hover{
+    background-color: white;
+    color: rgb(164, 122, 240);
+    scale: 0.9;
 }
 
