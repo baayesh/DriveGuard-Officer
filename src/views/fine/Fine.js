@@ -9,13 +9,18 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 // Offense List
 const options = [
   { value: "", label: "Select offense type..." },
-  { value: 1, label: "Offense 1" },
-  { value: 2, label: "Offenses 2" },
-  { value: 3, label: "Offenses 3" },
-  { value: 4, label: "Offense 1" },
-  { value: 5, label: "Offenses 2" },
-  { value: 6, label: "Offenses 3" },
+  { value: 1, label: "Failure to carry Emission Certificate" },
+  { value: 2, label: "Issues with Identification Plates" },
+  { value: 3, label: "Not Carrying Driving License" },
+  { value: 4, label: "No-use of seat belts" },
+  { value: 5, label: "Disobeying Road Rules" },
+  { value: 6, label: "Contravening Speed Limits" },
+  { value: 7, label: "Driving without a license" },
+  { value: 8, label: "Driving under the influence of liquor / narcotics" },
+  { value: 9, label: "Driving without a valid insurance cover" },
+  { value: 10, label: "Causing injuries / death to a person while driving under the influence of liquor" }
 ];
+
 
 const officerId = localStorage.getItem("officerId");
 
