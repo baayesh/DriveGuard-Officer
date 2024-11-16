@@ -17,6 +17,8 @@ const Search = ({ onHandleFine }) => {
   const [houseNumber, setHouseNumber] = useState("");
   const [streetName, setStreetName] = useState("");
   const [city, setCity] = useState("");
+  const [nic,setNic] = useState("");
+  const [offenseLevel, setOffenseLevel] = useState();
 
   //Offender details
   let OffenderDetails = "";
@@ -33,6 +35,8 @@ const Search = ({ onHandleFine }) => {
       setHouseNumber(response.data.houseNumber);
       setStreetName(response.data.streetName);
       setCity(response.data.city);
+      setNic(response.data.nic);
+      setOffenseLevel(response.data.offenseLevel);
     } catch (err) {
       console.error("error fetching data: ", err);
     }
@@ -69,6 +73,8 @@ const Search = ({ onHandleFine }) => {
             houseNumber={houseNumber}
             streetName={streetName}
             city={city}
+            nic={nic}
+            offenseLevel={offenseLevel}
           />
           <div className="fine-on-the-offender">
             <button onClick={handleFineOnOffender}>Fine on Offender</button>
